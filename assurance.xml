@@ -21,7 +21,7 @@
                 <nom>Jean</nom>
                 <prenom>Serge</prenom>
                 <naissance>10/02/1988</naissance>
-                <situation>marié</situation>
+                <situation>mar</situation>
                 <adresse>21 avenue Colonel</adresse>
                 <code_postal>06410</code_postal>
                 <ville>Biot</ville>
@@ -40,7 +40,7 @@
                 <nom>Parcoeur</nom>
                 <prenom>Peter</prenom>
                 <naissance>30/08/2000</naissance>
-                <situation>célibataire</situation>
+                <situation>cel</situation>
                 <adresse>13 rue Tchad</adresse>
                 <code_postal>31000</code_postal>
                 <ville>Toulouse</ville>
@@ -58,7 +58,7 @@
                 <nom>Pierrot</nom>
                 <prenom>Solène</prenom>
                 <naissance>27/10/1998</naissance>
-                <situation>célibataire</situation>
+                <situation>cel</situation>
                 <adresse>10 rue de la convention</adresse>
                 <code_postal>75000</code_postal>
                 <ville>Paris</ville>
@@ -76,7 +76,7 @@
             <nom>Pevensie</nom>
             <prenom>Lucy</prenom>
             <naissance>08/12/1994</naissance>
-            <situation>célibataire</situation>
+            <situation>cel</situation>
             <adresse>10 rue de l'amoire magique</adresse>
             <code_postal>01404</code_postal>
             <ville>Cair Paravel</ville>
@@ -94,7 +94,7 @@
                 <nom>Potbeur</nom>
                 <prenom>Henry</prenom>
                 <naissance>28/01/1989</naissance>
-                <situation>marié</situation>
+                <situation>mar</situation>
                 <adresse>5 rue sous l'escalier</adresse>
                 <code_postal>84410</code_postal>
                 <ville>Poudlard</ville>
@@ -123,7 +123,7 @@
                     <nom>Dupont</nom>
                     <prenom>Alfred</prenom>
                     <naissance>14/04/1983</naissance>
-                    <situation>célibataire</situation>
+                    <situation>cel</situation>
                     <adresse>chateau de</adresse>
                     <code_postal>55555</code_postal>
                     <ville>Moulinsart</ville>
@@ -145,7 +145,7 @@
                     <nom>Dupont</nom>
                     <prenom>Albert</prenom>
                     <naissance>14/04/1983</naissance>
-                    <situation>célibataire</situation>
+                    <situation>cel</situation>
                     <adresse>chateau de</adresse>
                     <code_postal>55555</code_postal>
                     <ville>Moulinsart</ville>
@@ -164,7 +164,7 @@
                     <nom>Charles</nom>
                     <prenom>Micheline</prenom>
                     <naissance>16/06/1960</naissance>
-                    <situation>mariée</situation>
+                    <situation>mar</situation>
                     <adresse>3 place du sol</adresse>
                     <code_postal>46800</code_postal>
                     <ville>Montcuq</ville>
@@ -181,7 +181,7 @@
                     <nom>Duncan</nom>
                     <prenom>Pimprenelle</prenom>
                     <naissance>20/08/1970</naissance>
-                    <situation>mariée</situation>
+                    <situation>mar</situation>
                     <adresse>2 rue Larrey</adresse>
                     <code_postal>65000</code_postal>
                     <ville>Tarbes</ville>

@@ -19,7 +19,6 @@
 
     <xs:complexType name="compagnieType">
         <xs:sequence>
-            <xs:element name="nomCompagnie" type="xs:string"/>
             <xs:element name="agences" type="agencesType"/>
             <xs:element name="clients" type="clientsType"/>
             <xs:element name="employes" type="employesType"/>
@@ -37,7 +36,6 @@
         <xs:sequence>
             <xs:element name="ville" type="xs:string"/>
             <xs:element name="nom" type="xs:string"/>
-            <xs:element name="employes" type="employesType"/>
         </xs:sequence>
         <xs:attribute name="idAgence" type="xs:int"/>
     </xs:complexType>
@@ -121,7 +119,7 @@
 
     <xs:complexType name="clientsAssocieesType">
         <xs:sequence>
-            <xs:element name="client">
+            <xs:element name="client" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:attribute name="clientId" type="xs:int"/>
                 </xs:complexType>
@@ -138,9 +136,9 @@
             <xs:element name="nom" type="xs:string"/>
             <xs:element name="prenom" type="xs:string"/>
             <xs:element name="naissance" type="DateType"/>
-            <xs:element name="situation" type="xs:string"/>
+            <xs:element name="situation" type="situationType"/>
             <xs:element name="adresse" type="xs:string"/>
-            <xs:element name="code_postal" type="xs:integer"/>
+            <xs:element name="code_postal" type="codePostalType"/>
             <xs:element name="ville" type="xs:string"/>
             <xs:element name="pays" type="xs:string"/>
             <xs:element name="email" type="emailType"/>
@@ -149,12 +147,33 @@
         </xs:all>
     </xs:complexType>
 
+    <xs:annotation>
+        <xs:documentation>célibataire = cel, marié(e) = mar, veuf(ve) =veuf, divorcé(e) =div, paxé(e) = pax</xs:documentation>
+    </xs:annotation>
+
+    <xs:simpleType name="situationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mar"/>
+            <xs:enumeration value="veuf"/>
+            <xs:enumeration value="cel"/>
+            <xs:enumeration value="div"/>
+            <xs:enumeration value="pax"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="codePostalType">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
 
     <xs:simpleType name="DateType">
         <xs:restriction base="xs:string">
             <xs:pattern value="\d{2}/\d{2}/\d{4}"/>
         </xs:restriction>
-
     </xs:simpleType>
 
     <xs:simpleType name="emailType">
