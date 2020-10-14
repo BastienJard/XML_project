@@ -15,6 +15,33 @@
             <xs:field xpath="@agenceId"/>
         </xs:keyref>
 
+        <xs:key name="secretaireIDKey">
+            <xs:selector xpath="employes/secretaires/secretaire"/>
+            <xs:field xpath="@idSecretaire"/>
+        </xs:key>
+        <xs:keyref name="secretaireLinkToConseiller" refer="secretaireIDKey">
+            <xs:selector xpath="employes/conseillers/conseiller/secretaireAssociee"/>
+            <xs:field xpath="@secretaireId"/>
+        </xs:keyref>
+
+        <xs:key name="clientIDKey">
+            <xs:selector xpath="clients/client"/>
+            <xs:field xpath="@idClient"/>
+        </xs:key>
+        <xs:keyref name="clientLinkToConseiller" refer="clientIDKey">
+            <xs:selector xpath="employes/conseillers/conseiller/clientsAssocies/client"/>
+            <xs:field xpath="@clientId"/>
+        </xs:keyref>
+
+        <xs:key name="contratIDKey">
+            <xs:selector xpath="contrats/contrat"/>
+            <xs:field xpath="@idContrat"/>
+        </xs:key>
+        <xs:keyref name="clientLinkToContrats" refer="contratIDKey">
+            <xs:selector xpath="clients/client/contrats/contrat"/>
+            <xs:field xpath="@contratId"/>
+        </xs:keyref>
+
     </xs:element>
 
     <xs:complexType name="compagnieType">
@@ -22,7 +49,7 @@
             <xs:element name="agences" type="agencesType"/>
             <xs:element name="clients" type="clientsType"/>
             <xs:element name="employes" type="employesType"/>
-            <xs:element name="formules" type="formulesType"/>
+            <xs:element name="contrats" type="contratsDetaillesType"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -56,13 +83,39 @@
     </xs:complexType>
 
     <xs:complexType name="contratsType">
+        <xs:sequence>
+            <xs:element name="contrat" type="contratType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
 
-
-    <xs:complexType name="formulesType">
-
+    <xs:complexType name="contratType">
+        <xs:attribute name="contratId" type="xs:int"/>
     </xs:complexType>
 
+    <xs:complexType name="contratsDetaillesType">
+        <xs:sequence>
+            <xs:element name="contrat" type="contratDetailleType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="contratDetailleType">
+        <xs:sequence>
+            <xs:element name="formule" type="formuleType"/>
+            <xs:element name="prix" type="xs:int"/>
+            <xs:element name="duree" type="xs:int"/>
+        </xs:sequence>
+        <xs:attribute name="idContrat" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:simpleType name="formuleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="immobilière"/>
+            <xs:enumeration value="véhicule"/>
+            <xs:enumeration value="crédit"/>
+            <xs:enumeration value="santé"/>
+            <xs:enumeration value="vie"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:complexType name="employesType">
         <xs:sequence>
@@ -109,7 +162,7 @@
                     <xs:attribute name="secretaireId" type="xs:int"/>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="clientsAssociees" type="clientsAssocieesType"/>
+            <xs:element name="clientsAssocies" type="clientsAssociesType"/>
             <xs:element name="etatcivil" type="etatcivilType"/>
             <xs:element name="salaire" type="xs:int"/>
         </xs:sequence>
@@ -117,7 +170,7 @@
     </xs:complexType>
 
 
-    <xs:complexType name="clientsAssocieesType">
+    <xs:complexType name="clientsAssociesType">
         <xs:sequence>
             <xs:element name="client" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
@@ -126,9 +179,6 @@
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-
-
-
 
 
     <xs:complexType name="etatcivilType">

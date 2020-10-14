@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="transfo1.xsl" ?>
+<?xml-stylesheet type="text/xml" ?>
 
 <!--<!DOCTYPE cv SYSTEM "cv.dtd">-->
 
@@ -31,8 +31,11 @@
                 <numeroSecuriteSociale>1 88 02 92 014 043 42</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-                <contrat contratId=""/>
-                <contrat contratId=""/>
+                <contrat contratId="100"/>
+                <contrat contratId="101"/>
+                <contrat contratId="102"/>
+                <contrat contratId="103"/>
+                <contrat contratId="104"/>
             </contrats>
         </client>
         <client idClient="2">
@@ -50,7 +53,11 @@
                 <numeroSecuriteSociale>1 00 08 30 201 876 49</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-
+                <contrat contratId="100"/>
+                <contrat contratId="101"/>
+                <contrat contratId="102"/>
+                <contrat contratId="103"/>
+                <contrat contratId="104"/>
             </contrats>
         </client>
         <client idClient="3">
@@ -68,7 +75,11 @@
                 <numeroSecuriteSociale>2 98 10 75 102 987 56</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-
+                <contrat contratId="100"/>
+                <contrat contratId="101"/>
+                <contrat contratId="102"/>
+                <contrat contratId="103"/>
+                <contrat contratId="104"/>
             </contrats>
         </client>
         <client idClient="4">
@@ -86,7 +97,11 @@
             <numeroSecuriteSociale>2 94 12 01 584 210 12</numeroSecuriteSociale>
         </etatcivil>
         <contrats>
-
+            <contrat contratId="100"/>
+            <contrat contratId="101"/>
+            <contrat contratId="102"/>
+            <contrat contratId="103"/>
+            <contrat contratId="104"/>
         </contrats>
     </client>
         <client idClient="5">
@@ -104,7 +119,11 @@
                 <numeroSecuriteSociale>2 94 12 01 584 210 12</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-
+                <contrat contratId="100"/>
+                <contrat contratId="101"/>
+                <contrat contratId="102"/>
+                <contrat contratId="103"/>
+                <contrat contratId="104"/>
             </contrats>
         </client>
     </clients>
@@ -114,11 +133,11 @@
             <conseiller idConseiller="1">
                 <agenceAssociee agenceId="1"/>
                 <secretaireAssociee secretaireId="1"/>
-                <clientsAssociees>
+                <clientsAssocies>
                     <client clientId="1"/>
                     <client clientId="2"/>
                     <client clientId="3"/>
-                </clientsAssociees>
+                </clientsAssocies>
                 <etatcivil>
                     <nom>Dupont</nom>
                     <prenom>Alfred</prenom>
@@ -137,10 +156,10 @@
             <conseiller idConseiller="2">
                 <agenceAssociee agenceId="2"/>
                 <secretaireAssociee secretaireId="2"/>
-                <clientsAssociees>
+                <clientsAssocies>
                     <client clientId="4"/>
                     <client clientId="5"/>
-                </clientsAssociees>
+                </clientsAssocies>
                 <etatcivil>
                     <nom>Dupont</nom>
                     <prenom>Albert</prenom>
@@ -196,10 +215,30 @@
     </employes>
 
     <contrats>
-        <contrat id="100">
-            <formule></formule>
-            <prix/>
-            <duree/>
+        <contrat idContrat="100">
+            <formule>immobilière</formule>
+            <prix>200</prix>
+            <duree>12</duree>
+        </contrat>
+        <contrat idContrat="101">
+            <formule>vie</formule>
+            <prix>200</prix>
+            <duree>12</duree>
+        </contrat>
+        <contrat idContrat="102">
+            <formule>santé</formule>
+            <prix>200</prix>
+            <duree>12</duree>
+        </contrat>
+        <contrat idContrat="103">
+            <formule>véhicule</formule>
+            <prix>200</prix>
+            <duree>12</duree>
+        </contrat>
+        <contrat idContrat="104">
+            <formule>crédit</formule>
+            <prix>200</prix>
+            <duree>12</duree>
         </contrat>
     </contrats>
 
