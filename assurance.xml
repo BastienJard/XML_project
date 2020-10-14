@@ -34,15 +34,35 @@
 
             </contrats>
         </client>
+        <client idClient="2">
+            <etatcivil>
+                <nom>Parcoeur</nom>
+                <prenom>Peter</prenom>
+                <naissance>30/08/2000</naissance>
+                <situation>célibataire</situation>
+                <adresse>13 rue Tchad</adresse>
+                <code_postal>31000</code_postal>
+                <ville>Toulouse</ville>
+                <pays>France</pays>
+                <telephone>07 25 78 92 13</telephone>
+                <email>peter.parcoeur@gmail.com</email>
+                <numeroSecuriteSociale>1 00 08 30 201 876 49</numeroSecuriteSociale>
+            </etatcivil>
+            <contrats>
+
+            </contrats>
+        </client>
     </clients>
 
     <employes>
-        <conseilles>
-            <conseille idConseille="1">
+        <conseillers>
+            <conseiller idConseille="1">
                 <agenceAssociee agenceId="1"/>
                 <secretaireAssociee secretaireID="1"/>
                 <clientsAssossiees>
                     <client clientId="1"/>
+                    <client clientId="2"/>
+                    <client clientId="3"/>
                 </clientsAssossiees>
                 <etatcivil>
                     <nom>Dupont</nom>
@@ -58,9 +78,30 @@
                     <numeroSecuriteSociale>1 83 04 55 078 382 43</numeroSecuriteSociale>
                 </etatcivil>
                 <salaire>29400</salaire>
-            </conseille>
-
-        </conseilles>
+            </conseiller>
+            <conseiller idConseille="2">
+                <agenceAssociee agenceId="2"/>
+                <secretaireAssociee secretaireID="2"/>
+                <clientsAssossiees>
+                    <client clientId="4"/>
+                    <client clientId="5"/>
+                </clientsAssossiees>
+                <etatcivil>
+                    <nom>Dupont</nom>
+                    <prenom>Albert</prenom>
+                    <naissance>14/04/1983</naissance>
+                    <situation>célibataire</situation>
+                    <adresse>chateau de</adresse>
+                    <code_postal>55555</code_postal>
+                    <ville>Moulinsart</ville>
+                    <pays>France</pays>
+                    <telephone>06 44 44 44 44</telephone>
+                    <email>albert.dupont@gmail.com</email>
+                    <numeroSecuriteSociale>1 83 04 55 078 382 90</numeroSecuriteSociale>
+                </etatcivil>
+                <salaire>29400</salaire>
+            </conseiller>
+        </conseillers>
         <secretaires>
             <secretaire idSecretaire="1">
                 <agenceAssociee agenceId="1"/>
@@ -76,6 +117,23 @@
                     <telephone>06 06 66 06 66</telephone>
                     <email>micheline.charles@gmail.com</email>
                     <numeroSecuriteSociale>2 60 06 16 780 372 50</numeroSecuriteSociale>
+                </etatcivil>
+                <salaire>22000</salaire>
+            </secretaire>
+            <secretaire idSecretaire="2">
+                <agenceAssociee agenceId="2"/>
+                <etatcivil>
+                    <nom>Duncan</nom>
+                    <prenom>Pimprenelle</prenom>
+                    <naissance>20/08/1970</naissance>
+                    <situation>mariée</situation>
+                    <adresse>2 rue Larrey</adresse>
+                    <code_postal>65000</code_postal>
+                    <ville>Tarbes</ville>
+                    <pays>France</pays>
+                    <telephone>06 98 00 18 17</telephone>
+                    <email>pimprenelle.duncan@gmail.com</email>
+                    <numeroSecuriteSociale>2 70 08 20 212 404 69</numeroSecuriteSociale>
                 </etatcivil>
                 <salaire>22000</salaire>
             </secretaire>
