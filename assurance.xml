@@ -196,10 +196,8 @@
     </employes>
 
     <contrats>
-        <contrat id="">
-            <assureur/>
-            <assure/>
-            <formule/>
+        <contrat id="100">
+            <formule></formule>
             <prix/>
             <duree/>
         </contrat>

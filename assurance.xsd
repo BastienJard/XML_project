@@ -1,6 +1,21 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="compagnie" type="compagnieType"/>
+    <xs:element name="compagnie" type="compagnieType">
+
+        <xs:key name="agenceIDKey">
+            <xs:selector xpath="agences/agence"/>
+            <xs:field xpath="@idAgence"/>
+        </xs:key>
+        <xs:keyref name="conseillerAgenceAssociee" refer="agenceIDKey">
+            <xs:selector xpath="employes/conseillers/conseiller/agenceAssociee"/>
+            <xs:field xpath="@agenceId"/>
+        </xs:keyref>
+        <xs:keyref name="secretaireAgenceAssociee" refer="agenceIDKey">
+            <xs:selector xpath="employes/secretaires/secretaire/agenceAssociee"/>
+            <xs:field xpath="@agenceId"/>
+        </xs:keyref>
+
+    </xs:element>
 
     <xs:complexType name="compagnieType">
         <xs:sequence>
