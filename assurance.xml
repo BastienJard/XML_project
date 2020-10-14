@@ -52,18 +52,72 @@
 
             </contrats>
         </client>
+        <client idClient="3">
+            <etatcivil>
+                <nom>Pierrot</nom>
+                <prenom>Solène</prenom>
+                <naissance>27/10/1998</naissance>
+                <situation>célibataire</situation>
+                <adresse>10 rue de la convention</adresse>
+                <code_postal>75000</code_postal>
+                <ville>Paris</ville>
+                <pays>France</pays>
+                <telephone>07 45 68 31 21</telephone>
+                <email>solene.pierrot@gmail.com</email>
+                <numeroSecuriteSociale>2 98 10 75 102 987 56</numeroSecuriteSociale>
+            </etatcivil>
+            <contrats>
+
+            </contrats>
+        </client>
+        <client idClient="4">
+        <etatcivil>
+            <nom>Pevensie</nom>
+            <prenom>Lucy</prenom>
+            <naissance>08/12/1994</naissance>
+            <situation>célibataire</situation>
+            <adresse>10 rue de l'amoire magique</adresse>
+            <code_postal>01404</code_postal>
+            <ville>Cair Paravel</ville>
+            <pays>Narnia</pays>
+            <telephone>06 87 85 86 84</telephone>
+            <email>lucy.penvensie@gmail.com</email>
+            <numeroSecuriteSociale>2 94 12 01 584 210 12</numeroSecuriteSociale>
+        </etatcivil>
+        <contrats>
+
+        </contrats>
+    </client>
+        <client idClient="5">
+            <etatcivil>
+                <nom>Potbeur</nom>
+                <prenom>Henry</prenom>
+                <naissance>28/01/1989</naissance>
+                <situation>marié</situation>
+                <adresse>5 rue sous l'escalier</adresse>
+                <code_postal>84410</code_postal>
+                <ville>Poudlard</ville>
+                <pays>France</pays>
+                <telephone>06 54 56 52 58</telephone>
+                <email>lucy.penvensie@gmail.com</email>
+                <numeroSecuriteSociale>2 94 12 01 584 210 12</numeroSecuriteSociale>
+            </etatcivil>
+            <contrats>
+
+            </contrats>
+        </client>
     </clients>
 
     <employes>
         <conseillers>
-            <conseiller idConseille="1">
+            <conseiller idConseiller="1">
                 <agenceAssociee agenceId="1"/>
-                <secretaireAssociee secretaireID="1"/>
-                <clientsAssossiees>
+                <secretaireAssociee secretaireId="1"/>
+                <clientsAssociees>
                     <client clientId="1"/>
                     <client clientId="2"/>
                     <client clientId="3"/>
-                </clientsAssossiees>
+                </clientsAssociees>
                 <etatcivil>
                     <nom>Dupont</nom>
                     <prenom>Alfred</prenom>
@@ -79,13 +133,13 @@
                 </etatcivil>
                 <salaire>29400</salaire>
             </conseiller>
-            <conseiller idConseille="2">
+            <conseiller idConseiller="2">
                 <agenceAssociee agenceId="2"/>
-                <secretaireAssociee secretaireID="2"/>
-                <clientsAssossiees>
+                <secretaireAssociee secretaireId="2"/>
+                <clientsAssociees>
                     <client clientId="4"/>
                     <client clientId="5"/>
-                </clientsAssossiees>
+                </clientsAssociees>
                 <etatcivil>
                     <nom>Dupont</nom>
                     <prenom>Albert</prenom>
