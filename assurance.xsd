@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="compagnie" type="compagnieType"/>
+
+    <xs:complexType name="compagnieType">
+        <xs:sequence>
+            <xs:element name="nomCompagnie" type="xs:string"/>
+            <xs:element name="agences" type="agencesType"/>
+            <xs:element name="clients" type="clientsType"/>
+            <xs:element name="employes" type="employesType"/>
+            <xs:element name="formules" type="formulesType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="agencesType">
+        <xs:sequence>
+            <xs:element name="agence" type="agenceType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="agenceType">
+        <xs:sequence>
+            <xs:element name="ville" type="xs:string"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="employes" type="employesType"/>
+        </xs:sequence>
+        <xs:attribute name="idAgence" type="xs:int"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="clientsType">
+        <xs:sequence>
+            <xs:element name="client" type="clientType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="clientType">
+        <xs:sequence>
+            <xs:element name="etatcivil" type="etatcivilType"/>
+            <xs:element name="contrats" type="contratsType"/>
+        </xs:sequence>
+        <xs:attribute name="idClient" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="contratsType">
+    </xs:complexType>
+
+
+    <xs:complexType name="formulesType">
+
+    </xs:complexType>
+
+
+    <xs:complexType name="employesType">
+        <xs:sequence>
+            <xs:element name="conseillers" type="conseillersType"/>
+            <xs:element name="secretaires" type="secretairesType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="secretairesType">
+        <xs:sequence>
+            <xs:element name="secretaire" type="secretaireType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="conseillersType">
+        <xs:sequence>
+            <xs:element name="conseiller" type="conseillerType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="secretaireType">
+        <xs:sequence>
+            <xs:element name="agenceAssociee">
+                <xs:complexType>
+                    <xs:attribute name="agenceId" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="etatcivil" type="etatcivilType"/>
+            <xs:element name="salaire" type="xs:int"/>
+        </xs:sequence>
+        <xs:attribute name="idSecretaire" type="xs:int"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="conseillerType">
+        <xs:sequence>
+            <xs:element name="agenceAssociee">
+                    <xs:complexType>
+                        <xs:attribute name="agenceId" type="xs:int"/>
+                    </xs:complexType>
+            </xs:element>
+            <xs:element name="secretaireAssociee">
+                <xs:complexType>
+                    <xs:attribute name="secretaireId" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="clientsAssociees" type="clientsAssocieesType"/>
+            <xs:element name="etatcivil" type="etatcivilType"/>
+            <xs:element name="salaire" type="xs:int"/>
+        </xs:sequence>
+        <xs:attribute name="idConseiller" type="xs:int"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="clientsAssocieesType">
+        <xs:sequence>
+            <xs:element name="client">
+                <xs:complexType>
+                    <xs:attribute name="clientId" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+
+    <xs:complexType name="etatcivilType">
+        <xs:all>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="naissance" type="DateType"/>
+            <xs:element name="situation" type="xs:string"/>
+            <xs:element name="adresse" type="xs:string"/>
+            <xs:element name="code_postal" type="xs:integer"/>
+            <xs:element name="ville" type="xs:string"/>
+            <xs:element name="pays" type="xs:string"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="telephone" type="telephoneType"/>
+            <xs:element name="numeroSecuriteSociale" type="numeroSecuriteSocialeType"/>
+        </xs:all>
+    </xs:complexType>
+
+
+    <xs:simpleType name="DateType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}/\d{2}/\d{4}"/>
+        </xs:restriction>
+
+    </xs:simpleType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telephoneType">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve"/>
+            <xs:pattern value="([0-9][0-9] ){4}([0-9][0-9])" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numeroSecuriteSocialeType">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve"/>
+            <xs:pattern value="[1|2] ([0-9][0-9] ){3}([0-9][0-9][0-9] ){2}([0-9][0-9])" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
