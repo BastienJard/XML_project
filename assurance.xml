@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transfo1.xsl" ?>
+
+<!--<!DOCTYPE cv SYSTEM "cv.dtd">-->
+
+<compagnie xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="assurance.xsd">
+    <agences>
+        <agence idAgence="1">
+            <ville>Monteton</ville>
+            <nom>agence du centre</nom>
+        </agence>
+        <agence idAgence="2">
+            <ville>Saint-Arnac</ville>
+            <nom>agence tout risques</nom>
+        </agence>
+    </agences>
+
+    <clients>
+        <client idClient="1">
+            <etatcivil>
+                <nom>Jean</nom>
+                <prenom>Serge</prenom>
+                <naissance>10/02/1988</naissance>
+                <situation>marié</situation>
+                <adresse>21 avenue Colonel</adresse>
+                <code_postal>06410</code_postal>
+                <ville>Biot</ville>
+                <pays>France</pays>
+                <telephone>07 81 81 00 81</telephone>
+                <email>serge.jean@gmail.com</email>
+                <numeroSecuriteSociale>1 88 02 92 014 043 42</numeroSecuriteSociale>
+            </etatcivil>
+            <contrats>
+
+            </contrats>
+        </client>
+    </clients>
+
+    <employes>
+        <conseilles>
+            <conseille idConseille="1">
+                <agenceAssociee agenceId="1"/>
+                <secretaireAssociee secretaireID="1"/>
+                <clientsAssossiees>
+                    <client clientId="1"/>
+                </clientsAssossiees>
+                <etatcivil>
+                    <nom>Dupont</nom>
+                    <prenom>Alfred</prenom>
+                    <naissance>14/04/1983</naissance>
+                    <situation>célibataire</situation>
+                    <adresse>chateau de</adresse>
+                    <code_postal>55555</code_postal>
+                    <ville>Moulinsart</ville>
+                    <pays>France</pays>
+                    <telephone>06 42 42 42 42</telephone>
+                    <email>alfred.dupont@gmail.com</email>
+                    <numeroSecuriteSociale>1 83 04 55 078 382 43</numeroSecuriteSociale>
+                </etatcivil>
+                <salaire>29400</salaire>
+            </conseille>
+
+        </conseilles>
+        <secretaires>
+            <secretaire idSecretaire="1">
+                <agenceAssociee agenceId="1"/>
+                <etatcivil>
+                    <nom>Charles</nom>
+                    <prenom>Micheline</prenom>
+                    <naissance>16/06/1960</naissance>
+                    <situation>mariée</situation>
+                    <adresse>3 place du sol</adresse>
+                    <code_postal>46800</code_postal>
+                    <ville>Montcuq</ville>
+                    <pays>France</pays>
+                    <telephone>06 06 66 06 66</telephone>
+                    <email>micheline.charles@gmail.com</email>
+                    <numeroSecuriteSociale>2 60 06 16 780 372 50</numeroSecuriteSociale>
+                </etatcivil>
+                <salaire>22000</salaire>
+            </secretaire>
+        </secretaires>
+    </employes>
+
+    <formules>
+
+    </formules>
+</compagnie>
