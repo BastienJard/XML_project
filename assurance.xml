@@ -31,7 +31,8 @@
                 <numeroSecuriteSociale>1 88 02 92 014 043 42</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-
+                <contrat contratId=""/>
+                <contrat contratId=""/>
             </contrats>
         </client>
         <client idClient="2">
@@ -194,7 +195,14 @@
         </secretaires>
     </employes>
 
-    <formules>
+    <contrats>
+        <contrat id="">
+            <assureur/>
+            <assure/>
+            <formule/>
+            <prix/>
+            <duree/>
+        </contrat>
+    </contrats>
 
-    </formules>
 </compagnie>
