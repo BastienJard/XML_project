@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xml" href="scenario2.xsl"?>
-
-<!--<!DOCTYPE cv SYSTEM "cv.dtd">-->
+<?xml-stylesheet type="text/xml" href="scénario1.xsl"?>
 
 <compagnie xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="assurance.xsd">
     <agences>
@@ -31,11 +29,7 @@
                 <numeroSecuriteSociale>1 88 02 92 014 043 42</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-                <contrat contratId="100"/>
-                <contrat contratId="101"/>
-                <contrat contratId="102"/>
-                <contrat contratId="103"/>
-                <contrat contratId="104"/>
+                <contrat contratId="106"/>
             </contrats>
         </client>
         <client idClient="2">
@@ -76,7 +70,7 @@
             </etatcivil>
             <contrats>
                 <contrat contratId="100"/>
-                <contrat contratId="101"/>
+                <contrat contratId="105"/>
                 <contrat contratId="102"/>
                 <contrat contratId="103"/>
                 <contrat contratId="104"/>
@@ -98,10 +92,9 @@
         </etatcivil>
         <contrats>
             <contrat contratId="100"/>
-            <contrat contratId="101"/>
+            <contrat contratId="105"/>
             <contrat contratId="102"/>
             <contrat contratId="103"/>
-            <contrat contratId="104"/>
         </contrats>
     </client>
         <client idClient="5">
@@ -139,7 +132,7 @@
                     <client clientId="3"/>
                 </clientsAssocies>
                 <etatcivil>
-                    <nom>Dupont</nom>
+                    <nom>Dupond</nom>
                     <prenom>Alfred</prenom>
                     <naissance>14/04/1983</naissance>
                     <situation>cel</situation>
@@ -217,27 +210,37 @@
     <contrats>
         <contrat idContrat="100">
             <formule>immobilière</formule>
-            <prix>200</prix>
+            <prix>17</prix>
             <duree>12</duree>
         </contrat>
         <contrat idContrat="101">
             <formule>vie</formule>
-            <prix>200</prix>
-            <duree>12</duree>
+            <prix>50</prix>
+            <duree>permanent</duree>
+        </contrat>
+        <contrat idContrat="105">
+            <formule>vie</formule>
+            <prix>50</prix>
+            <duree>6</duree>
         </contrat>
         <contrat idContrat="102">
             <formule>santé</formule>
-            <prix>200</prix>
-            <duree>12</duree>
+            <prix>65</prix>
+            <duree>permanent</duree>
         </contrat>
         <contrat idContrat="103">
             <formule>véhicule</formule>
-            <prix>200</prix>
+            <prix>37</prix>
             <duree>12</duree>
         </contrat>
         <contrat idContrat="104">
             <formule>crédit</formule>
-            <prix>200</prix>
+            <prix>30</prix>
+            <duree>36</duree>
+        </contrat>
+        <contrat idContrat="106">
+            <formule>tout risques</formule>
+            <prix>60</prix>
             <duree>12</duree>
         </contrat>
     </contrats>
