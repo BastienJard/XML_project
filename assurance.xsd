@@ -62,7 +62,11 @@
     <xs:complexType name="agenceType">
         <xs:sequence>
             <xs:element name="ville" type="xs:string"/>
+            <xs:element name="code_postal" type="codePostalType"/>
+            <xs:element name="adresse" type="xs:string"/>
             <xs:element name="nom" type="xs:string"/>
+            <xs:element name="telephone" type="telephoneType"/>
+            <xs:element name="email" type="emailType"/>
         </xs:sequence>
         <xs:attribute name="idAgence" type="xs:int"/>
     </xs:complexType>

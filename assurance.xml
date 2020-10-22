@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xml" href="scenario1.xs3"?>
+<?xml-stylesheet type="text/xml" href="scenario1.xsl"?>
 
 <compagnie xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="assurance.xsd">
     <agences>
         <agence idAgence="1">
             <ville>Monteton</ville>
+            <code_postal>47187</code_postal>
+            <adresse> 75 rue de la Liberté</adresse>
             <nom>agence du centre</nom>
+            <telephone>05 12 58 93 97</telephone>
+            <email>agence_du_centre@hotmail.fr</email>
         </agence>
         <agence idAgence="2">
             <ville>Saint-Arnac</ville>
+            <code_postal>66220</code_postal>
+            <adresse> 10 rue de la Paix</adresse>
             <nom>agence tout risques</nom>
+            <telephone>04 72 30 10 28</telephone>
+            <email>agence_tout_risques@hotmail.fr</email>
         </agence>
     </agences>
 
