@@ -100,16 +100,18 @@
 
     <xs:complexType name="contratDetailleType">
         <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
             <xs:element name="formule" type="formuleType"/>
             <xs:element name="prix" type="xs:int"/>
             <xs:element name="duree" type="xs:anyType"/>
+            <xs:element name="description" type="xs:string"/>
         </xs:sequence>
         <xs:attribute name="idContrat" type="xs:int"/>
     </xs:complexType>
 
     <xs:simpleType name="formuleType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="immobilière"/>
+            <xs:enumeration value="habitation"/>
             <xs:enumeration value="véhicule"/>
             <xs:enumeration value="crédit"/>
             <xs:enumeration value="santé"/>

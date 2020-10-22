@@ -58,7 +58,7 @@
     <xsl:template match="contrat">
         <br/>
         <span style="margin-left:55px"> -
-            <xsl:value-of select="key('contratsListe',@contratId)/formule"/>
+            <xsl:value-of select="key('contratsListe',@contratId)/nom"/>
         </span>
 
     </xsl:template>

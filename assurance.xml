@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xml" href="scénario1.xsl"?>
+<?xml-stylesheet type="text/xml" href="scenario2.xsl"?>
 
 <compagnie xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="assurance.xsd">
     <agences>
@@ -29,7 +29,9 @@
                 <numeroSecuriteSociale>1 88 02 92 014 043 42</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-                <contrat contratId="106"/>
+                <contrat contratId="101"/>
+                <contrat contratId="104"/>
+                <contrat contratId="107"/>
             </contrats>
         </client>
         <client idClient="2">
@@ -73,7 +75,6 @@
                 <contrat contratId="105"/>
                 <contrat contratId="102"/>
                 <contrat contratId="103"/>
-                <contrat contratId="104"/>
             </contrats>
         </client>
         <client idClient="4">
@@ -112,7 +113,6 @@
                 <numeroSecuriteSociale>2 94 12 01 584 210 12</numeroSecuriteSociale>
             </etatcivil>
             <contrats>
-                <contrat contratId="100"/>
                 <contrat contratId="101"/>
                 <contrat contratId="102"/>
                 <contrat contratId="103"/>
@@ -209,39 +209,71 @@
 
     <contrats>
         <contrat idContrat="100">
-            <formule>immobilière</formule>
+            <nom>Contrat habitation 12 mois</nom>
+            <formule>habitation</formule>
             <prix>17</prix>
             <duree>12</duree>
+            <description>Assurance habitation de 12 mois couvrant les locaux, leur contenu et la responsabilité civile
+            de ses occupants pour le logement d'un particulier pour un coût de 17€/mois</description>
         </contrat>
         <contrat idContrat="101">
+            <nom>Contrat vie permanent</nom>
             <formule>vie</formule>
             <prix>50</prix>
             <duree>permanent</duree>
+            <description>Assurance vie permanent garantissant le versement d'une certaine
+                somme d'argent lorsque survient un événement lié à l'assuré pour un coût de 63€/mois</description>
         </contrat>
         <contrat idContrat="105">
+            <nom>Contrat vie 6 mois</nom>
             <formule>vie</formule>
-            <prix>50</prix>
+            <prix>63</prix>
             <duree>6</duree>
+            <description>Assurance vie de 6 mois garantissant le versement d'une certaine
+                somme d'argent lorsque survient un événement lié à l'assuré pour un coût de 63€/mois </description>
         </contrat>
         <contrat idContrat="102">
+            <nom>Contrat santé permanent</nom>
             <formule>santé</formule>
             <prix>65</prix>
             <duree>permanent</duree>
+            <description>Assurance santé permanent à durée permanente garantissant l'accés aux soins et un revenu minimal
+            dans le cas où la maladie prive l'assuré de son travail pour un coût de 65€/mois</description>
         </contrat>
-        <contrat idContrat="103">
-            <formule>véhicule</formule>
-            <prix>37</prix>
-            <duree>12</duree>
-        </contrat>
+
         <contrat idContrat="104">
+            <nom>Contrat crédit 36 mois</nom>
             <formule>crédit</formule>
             <prix>30</prix>
             <duree>36</duree>
+            <description>Assurance crédit de 36 moisgarantissant un remboursemement dans le cas de défauts
+                de paiement d'un des clients pour un coût de 30€/mois</description>
+        </contrat>
+        <contrat idContrat="103">
+            <nom>Contrat véhicule classique 12 mois</nom>
+            <formule>véhicule</formule>
+            <prix>37</prix>
+            <duree>12</duree>
+            <description>Assurance automible d'une durée de 12 mois couvrant la majorité des accidents responsables
+                sur les véhicules et garantissant un dédommagement partiel sur les réparations pour un coût de 37€/mois</description>
         </contrat>
         <contrat idContrat="106">
+            <nom>Contrat auto tout risques 12 mois</nom>
             <formule>tout risques</formule>
             <prix>60</prix>
             <duree>12</duree>
+            <description>Assurance automible d'une durée de 12 mois couvrant un large éventail de
+                dommages sur les véhicules et garantissant un dédommagement dans la plupart
+                des situations pour un coût de 60€/mois </description>
+        </contrat>
+        <contrat idContrat="107">
+            <nom>Contrat auto tout risques permanent</nom>
+            <formule>tout risques</formule>
+            <prix>52</prix>
+            <duree>permanent</duree>
+            <description>Assurance automible permanent couvrant un large éventail de
+                dommages sur les véhicules et garantissant un dédommagement dans la plupart
+                des situations pour un coût de 52€/mois </description>
         </contrat>
     </contrats>
 
