@@ -1,4 +1,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!--
+    Le PDG de l'entreprise veut pouvoir visualiser la liste de toutes les agences de l'entreprise avec leurs coordonnées
+     ainsi que les employés qui y sont rattachés, et ce afin de savoir si des embauches sont nécessaires dans certaines agences.
+    -->
+
     <xsl:key name="conseillerKey" match="compagnie/employes/conseillers/conseiller/agenceAssociee" use="@agenceId"/>
     <xsl:key name="secretaireKey" match="compagnie/employes/secretaires/secretaire/agenceAssociee" use="@agenceId"/>
 

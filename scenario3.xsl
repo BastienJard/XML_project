@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!--
+    Le PDG de l'entreprise souhaite avoir accés à toutes les informations de ses employés tel que l'état civil en général ainsi que le salaire que touche l'employé.
+    -->
+
     <xsl:template match="/">
         <html>
             <head>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!--
+    Le PDG de l'entreprise souhaite visualiser les clients qui sont associés à chaque conseiller ainsi que les contrats auxquels ils ont souscrit.
+    -->
+
     <xsl:key name="clientListe" match="compagnie/clients/client" use="@idClient" />
     <xsl:key name="contratsListe" match="compagnie/contrats/contrat" use="@idContrat" />
     <xsl:template match="/">

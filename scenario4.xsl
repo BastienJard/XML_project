@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!--
+   Un service internet de comparaison de prix d'assurance souhaite inclure la compagnie dans son comparateur de prix,
+   et à donc besoin pour se faire des contrats proposés par la compagnie avec les services et les prix associés aux contrats.
+    -->
+
     <xsl:template match="/">
         <html>
             <head>
